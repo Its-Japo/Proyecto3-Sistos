@@ -12,14 +12,12 @@ class Priority:
         remaining_processes = processes.copy()
         
         while remaining_processes:
-            # Get available processes
             available = [p for p in remaining_processes if p.arrival_time <= current_time]
             
             if not available:
                 current_time = min(p.arrival_time for p in remaining_processes)
                 continue
             
-            # Select highest priority (lowest number = highest priority)
             selected = min(available, key=lambda p: p.priority)
             
             start_time = current_time
