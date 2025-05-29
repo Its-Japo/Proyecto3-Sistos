@@ -114,12 +114,10 @@ class GanttChart:
                                    text=status_text, font=('Arial', 8),
                                    fill=text_color)
         
-        # Etiquetas de procesos
         for process_id, y in y_positions.items():
             self.canvas.create_text(25, y + block_height / 2, text=process_id, 
                                    font=('Arial', 10, 'bold'))
         
-        # Línea de tiempo actual
         if current_time is not None:
             x = start_x + current_time * time_scale
             self.canvas.create_line(x, start_y - 20, x, current_y, 
