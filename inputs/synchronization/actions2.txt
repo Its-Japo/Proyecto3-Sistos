@@ -1,0 +1,16 @@
+P1, READ, Database, 0
+P2, WRITE, Printer, 1
+P3, READ, FileSystem, 1
+P1, WRITE, Network, 2
+P4, READ, Database, 2
+P2, READ, FileSystem, 3
+P5, WRITE, Printer, 4
+P3, WRITE, Database, 4
+P4, READ, Network, 5
+P1, READ, Printer, 6
+P5, WRITE, FileSystem, 7
+P2, READ, Network, 8
+P3, WRITE, Printer, 9
+P4, READ, FileSystem, 10
+P5, READ, Database, 11
+

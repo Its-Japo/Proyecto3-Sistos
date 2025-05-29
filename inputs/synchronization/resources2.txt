@@ -1,0 +1,5 @@
+Database, 1
+Printer, 2
+FileSystem, 3
+Network, 1
+
