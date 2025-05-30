@@ -11,7 +11,7 @@ class RoundRobin:
         if quantum <= 0:
             raise ValueError(f"Quantum must be positive, got {quantum}")
         
-        if quantum > 1000:  # Reasonable upper limit
+        if quantum > 1000:
             raise ValueError(f"Quantum too large: {quantum}")
         
         for i, process in enumerate(processes):
@@ -34,7 +34,6 @@ class RoundRobin:
             ready_queue = deque()
             remaining_processes = sorted(processes, key=lambda p: p.arrival_time)
             
-            # Reset remaining times
             for p in remaining_processes:
                 p.remaining_time = p.burst_time
             
